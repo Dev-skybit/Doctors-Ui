@@ -1,24 +1,31 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+
+import Doctors from './components/DoctorsCardsWrapper';
+import Profile from './components/Profile';
+import SearchTab from './components/SearchTab';
+import Appointments from './components/Appointments';
+
+import styled from 'styled-components';
+
+const Container = styled.div`
+  height: 100vh;
+
+  overflow-x: hidden;
+  overflow-y: scroll;
+`
 
 function App() {
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Container>
+      <Profile />
+
+      <SearchTab />
+
+      <Doctors />
+
+      <Appointments />
+    </Container>
   );
 }
 
